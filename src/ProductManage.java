@@ -106,6 +106,7 @@ public class ProductManage {
     // Xóa sản phẩm
     public void deleteProductByID(){
         Main main = new Main();
+        String check = "";
         displayAll();
         try {
             System.out.println("Nhập mã sản phẩm bạn cần xóa: ");
@@ -131,6 +132,10 @@ public class ProductManage {
             System.out.println("------------------------------------");
             System.err.println("Bạn nhập sai kiểu dữ liệu !!!");
             deleteProductByID();
+        }catch (Exception e){
+            System.out.println("------------------------------------");
+            System.err.println("Bạn đã thoát khỏi phần Xóa của chương trình !!!");
+            main.Menu();
         }
     }
 
